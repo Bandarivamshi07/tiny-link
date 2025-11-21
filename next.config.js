@@ -1,10 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
   async rewrites() {
     return [
       {
-        source: "/healthz",
-        destination: "/api/healthz",
+        source: "/:code",
+        destination: "/code/:code",
       },
     ];
   },
