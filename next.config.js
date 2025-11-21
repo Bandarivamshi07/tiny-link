@@ -1,10 +1,4 @@
-module.exports = {
-  async rewrites() {
-    return [
-      {
-        source: "/healthz",
-        destination: "/api/healthz",
-      },
-    ];
-  },
-};
+/** @type {import("next").NextConfig} */
+const nextConfig = {};
+
+module.exports = nextConfig;
