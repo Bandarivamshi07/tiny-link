@@ -3,7 +3,7 @@ module.exports = {
     return [
       {
         source: "/healthz",
-        destination: "/healthz",
+        destination: "/api/healthz",
       },
     ];
   },
