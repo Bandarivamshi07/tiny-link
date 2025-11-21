@@ -3,15 +3,17 @@ export async function getServerSideProps() {
     props: {
       ok: true,
       version: "1.0",
-      timestamp: new Date().toISOString(),
     },
   };
 }
 
-export default function HealthzPage({ ok, version, timestamp }) {
+interface HealthProps {
+  ok: boolean;
+  version: string;
+}
+
+export default function Healthz({ ok, version }: HealthProps) {
   return (
-    <pre>
-{JSON.stringify({ ok, version, timestamp }, null, 2)}
-    </pre>
+    <pre>{JSON.stringify({ ok, version }, null, 2)}</pre>
   );
 }
