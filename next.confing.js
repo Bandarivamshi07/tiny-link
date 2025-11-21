@@ -1,6 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  async rewrites() {
+    return [
+      {
+        source: "/healthz",
+        destination: "/api/healthz",
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
